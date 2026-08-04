@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SK Online</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f4f7fb;
+}
+
+/* Header */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 7%;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#0d47a1;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+margin:0 15px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#0d6efd;
+}
+
+.login{
+background:#ff6b00;
+color:white;
+padding:12px 20px;
+border-radius:30px;
+cursor:pointer;
+}
+
+/* Hero */
+
+.hero{
+width:90%;
+margin:40px auto;
+padding:90px;
+text-align:center;
+border-radius:25px;
+color:white;
+background:linear-gradient(120deg,#ff4da6,#7b61ff,#33b5ff);
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+/* Search */
+
+.search{
+width:70%;
+margin:-20px auto 40px;
+background:white;
+display:flex;
+border-radius:50px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.search input{
+flex:1;
+padding:18px;
+border:none;
+outline:none;
+font-size:18px;
+}
+
+.search button{
+width:80px;
+border:none;
+background:#0d6efd;
+color:white;
+font-size:20px;
+cursor:pointer;
+}
+
+/* Section */
+
+.section{
+width:90%;
+margin:auto;
+}
+
+.section h2{
+margin:30px 0;
+font-size:35px;
+}
+
+/* Cards */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:25px;
+}
+
+.card-link{
+text-decoration:none;
+color:inherit;
+display:block;
+}
+
+.card{
+background:white;
+height:180px;
+padding:35px 15px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+.icon{
+font-size:50px;
+margin-bottom:15px;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+.cards{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.hero{
+padding:50px 20px;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+.search{
+width:90%;
+}
+
+.cards{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+/* ================= FOOTER ================= */
+
+.footer{
+margin-top:60px;
+background:linear-gradient(135deg,#0d47a1,#1565c0,#2196f3);
+color:#fff;
+padding-top:50px;
+}
+
+.footer-container{
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+padding-bottom:35px;
+}
+
+.footer-box h2,
+.footer-box h3{
+margin-bottom:15px;
+}
+
+.footer-box p{
+line-height:1.8;
+color:#e5e5e5;
+}
+
+.footer-box ul{
+list-style:none;
+}
+
+.footer-box ul li{
+margin:10px 0;
+}
+
+.footer-box ul li a{
+color:#fff;
+text-decoration:none;
+transition:.3s;
+}
+
+.footer-box ul li a:hover{
+color:#FFD54F;
+padding-left:6px;
+}
+
+.social-icons{
+margin-top:15px;
+display:flex;
+gap:12px;
+}
+
+.social-icons a{
+width:42px;
+height:42px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,.15);
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.social-icons a:hover{
+background:#FFD54F;
+color:#222;
+transform:translateY(-5px);
+}
+
+.footer-bottom{
+text-align:center;
+padding:18px;
+background:rgba(0,0,0,.2);
+font-size:15px;
+border-top:1px solid rgba(255,255,255,.15);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+SK Online
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Jobs</a>
+<a href="#">Pricing</a>
+</nav>
+
+<div class="login">
+Login
+</div>
+
+</header>
+
+<div class="hero">
+<h1>Digital Operations With SK Online</h1>
+<p>All in One Printing & Digital Service Platform</p>
+</div>
+
+<div class="search">
+
+<input type="text" placeholder="Search services...">
+<button>🔍</button>
+
+</div>
+
+<div class="section">
+
+<h2>Essential Services</h2>
+
+<div class="cards">
+
+<a href="aadhar.html" class="card-link">
+<div class="card">
+<div class="icon">🪪</div>
+<h3>Aadhar Card</h3>
+</div>
+</a>
+
+<a href="pan.html" class="card-link">
+<div class="card">
+<div class="icon">💳</div>
+<h3>Pan Card</h3>
+</div>
+</a>
+
+<a href="voter.html" class="card-link">
+<div class="card">
+<div class="icon">🗳️</div>
+<h3>Voter Card</h3>
+</div>
+</a>
+
+<a href="rtps.html" class="card-link">
+<div class="card">
+<div class="icon">🖨️</div>
+<h3>RTPS-4</h3>
+</div>
+</a>
+
+<a href="sbpdcl.html" class="card-link">
+<div class="card">
+<div class="icon">📷</div>
+<h3>sbpdcl bihar</h3>
+</div>
+</a>
+
+<a href="Jamin.html" class="card-link">
+<div class="card">
+<div class="icon">📄</div>
+<h3>Jamin Services</h3>
+</div>
+</a>
+
+<a href="pf.html" class="card-link">
+<div class="card">
+<div class="icon">📑</div>
+<h3>EPFO / PF</h3>
+</div>
+</a>
+
+<a href="aayushman.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>ABHA / Aayushman</h3>
+</div>
+</a>
+
+<a href="esharam.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>E-Shram Card</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+</div>
+
+<!-- ------------------------- -->
+
+</div>
+
+<div class="section">
+
+<h2>Tools Gedget</h2>
+
+<div class="cards">
+
+<a href="aadhar.html" class="card-link">
+<div class="card">
+<div class="icon">🪪</div>
+<h3>Aadhar Card</h3>
+</div>
+</a>
+
+<a href="pan.html" class="card-link">
+<div class="card">
+<div class="icon">💳</div>
+<h3>Pan Card</h3>
+</div>
+</a>
+
+<a href="voter.html" class="card-link">
+<div class="card">
+<div class="icon">🗳️</div>
+<h3>Voter Card</h3>
+</div>
+</a>
+
+<a href="rtps.html" class="card-link">
+<div class="card">
+<div class="icon">🖨️</div>
+<h3>RTPS-4</h3>
+</div>
+</a>
+
+<a href="sbpdcl.html" class="card-link">
+<div class="card">
+<div class="icon">📷</div>
+<h3>sbpdcl bihar</h3>
+</div>
+</a>
+
+<a href="Jamin.html" class="card-link">
+<div class="card">
+<div class="icon">📄</div>
+<h3>Jamin Services</h3>
+</div>
+</a>
+
+<a href="pf.html" class="card-link">
+<div class="card">
+<div class="icon">📑</div>
+<h3>EPFO / PF</h3>
+</div>
+</a>
+
+<a href="aayushman.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>ABHA / Aayushman</h3>
+</div>
+</a>
+
+<a href="esharam.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>E-Shram Card</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+<a href="gas.html" class="card-link">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Gas Service</h3>
+</div>
+</a>
+
+</div>
+
+
+
+
+
+</div> 
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-box">
+<h2>SK Online</h2>
+<p>Your trusted Digital Service & Printing Platform.</p>
+</div>
+
+<div class="footer-box">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Jobs</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+
+<div class="footer-box">
+<h3>Our Services</h3>
+<ul>
+<li><a href="#">Aadhar Card</a></li>
+<li><a href="#">PAN Card</a></li>
+<li><a href="#">Voter Card</a></li>
+<li><a href="#">PDF Tools</a></li>
+</ul>
+</div>
+
+<div class="footer-box">
+<h3>Contact Us</h3>
+<p>📍 Mithapur, Bihar</p>
+<p>📞 +91 9876543210</p>
+<p>📧 info@skonline.in</p>
+
+<div class="social-icons">
+<a href="#">🌐</a>
+<a href="#">📘</a>
+<a href="#">📷</a>
+<a href="#">▶️</a>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 SK Online | Designed with ❤️ by SK Online
+</div>
+
+</footer>
+
+<script>
+
+const searchInput = document.querySelector(".search input");
+
+const cardLinks = document.querySelectorAll(".card-link");
+
+searchInput.addEventListener("input",function(){
+
+let searchValue = this.value.toLowerCase().trim();
+
+cardLinks.forEach(function(link){
+
+let cardName = link.querySelector("h3").innerText.toLowerCase();
+
+if(cardName.includes(searchValue)){
+link.style.display="block";
+}else{
+link.style.display="none";
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

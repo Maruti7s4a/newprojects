@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Shram Services</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+.container{
+    width:85%;
+    max-width:1000px;
+    margin:40px auto;
+    background:#fff;
+    padding:40px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+h1{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:20px;
+    font-weight:500;
+}
+
+.line{
+    height:2px;
+    background:#5d8cff;
+    margin-bottom:30px;
+}
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    margin-bottom:40px;
+}
+
+.search-box input{
+    width:400px;
+    padding:12px;
+    font-size:18px;
+    border:1px solid #ccc;
+    border-radius:5px 0 0 5px;
+    outline:none;
+}
+
+.search-box button{
+    padding:12px 20px;
+    border:none;
+    background:#0d6efd;
+    color:#fff;
+    cursor:pointer;
+    font-size:18px;
+    border-radius:0 5px 5px 0;
+}
+
+.search-box button:hover{
+    background:#0b5ed7;
+}
+
+.service{
+    margin-bottom:50px;
+}
+
+.row{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.title{
+    font-size:30px;
+    transition:.3s;
+}
+
+.arrow{
+    font-size:32px;
+    color:#0066ff;
+}
+
+.link{
+    font-size:30px;
+    color:blue;
+    text-decoration:none;
+}
+
+.link:hover{
+    text-decoration:underline;
+}
+
+ul{
+    margin-top:15px;
+    margin-left:40px;
+}
+
+li{
+    font-size:15px;
+}
+
+.highlight{
+    background:yellow;
+    padding:4px 8px;
+    border-radius:4px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>E-Shram Services</h1>
+
+<div class="line"></div>
+
+<div class="search-box">
+    <input type="text" id="search" placeholder="Search Service...">
+    <button onclick="searchTitle()">Search</button>
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">1. Apply New E-Shram Card</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://register.eshram.gov.in/#/user/platform-worker-registration" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Aadhar Link Mobile</li>
+        <li>Pan Card</li>
+    </ul>
+
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">2. Name/Address/Qulification/Ocupation Update</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://register.eshram.gov.in/#/user/occupation" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Aadhar Link Mobile</li>
+        <li>Ration Card</li>
+    </ul>
+
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">3. Download E-Sharm Card</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://beneficiary.nha.gov.in/" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Aadhar Link Mobile</li>
+        <li>Ration Card</li>
+        <li>Photo</li>
+    </ul>
+
+</div>
+
+<!-- <div class="service">
+
+    <div class="row">
+        <span class="title">4. Card Download</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://beneficiary.nha.gov.in/" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Aadhar Link Mobile</li>
+        <li>Ration Card</li>
+        <li>Photo</li>
+    </ul>
+
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">5. Card Status Check</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://beneficiary.nha.gov.in/" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Aadhar Link Mobile</li>
+        <li>Ration Card</li>
+        <li>Photo</li>
+    </ul>
+
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">6. AABHA Card Apply</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://abha.abdm.gov.in/abha/v3/register/aadhaar" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Aadhar Link Mobile</li>
+    </ul>
+
+</div> -->
+
+
+
+
+
+
+</div>
+
+</div>
+
+<script>
+
+function searchTitle(){
+
+    let input = document.getElementById("search").value.trim().toLowerCase();
+    let titles = document.querySelectorAll(".title");
+
+    // Remove old highlight
+    titles.forEach(function(title){
+        title.classList.remove("highlight");
+    });
+
+    if(input==="") return;
+
+    let found = false;
+
+    titles.forEach(function(title){
+
+        if(!found && title.innerText.toLowerCase().includes(input)){
+
+            title.classList.add("highlight");
+
+            title.scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
+
+            found = true;
+        }
+
+    });
+
+}
+
+// Search button + Enter key
+document.getElementById("search").addEventListener("keydown", function(e){
+
+    if(e.key==="Enter"){
+        e.preventDefault();
+        searchTitle();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
