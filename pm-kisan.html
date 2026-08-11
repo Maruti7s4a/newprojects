@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM Kisan Services</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>PM Kisan Services</h1>
+
+<div class="line"></div>
+
+<div class="search-box">
+    <input type="text" id="search" placeholder="Search Service...">
+    <button onclick="searchTitle()">Search</button>
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">1. Farmer ID Creation AS</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://bhfr.agristack.gov.in/farmer-registry-bh/#/" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Aadhar link Mobile</li>
+        <li>Khtauni- Surway No- Gata No</li>
+    </ul>
+
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">2. Fermer Registration SNY</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://pmkisan.gov.in/RegistrationFormupdated.aspx" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Farmer id</li>
+        <li>Aadhar link Mobile</li>
+        <li>Khatuni Copy</li>
+        <li>2019 ke baad - Father,Mother,Husband - Death</li>
+        <li>Death Person Aadhar Number</li>
+    </ul>
+
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">3. Know Your Status SNY</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://pmkisan.gov.in/BeneficiaryStatus_New.aspx" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Registration Number</li>
+    </ul>
+
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">4. Update Mobile Number SNY</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://pmkisan.gov.in/MobileUpdation_Pub.aspx" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Aadhaar No 🔗 Mobile No</li>
+        <li>Registration Number</li>
+    </ul>
+
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">5. Edit/Update Self Registration SNY</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://pmkisan.gov.in/SearchSelfRegisterfarmerDetailsnewUpdated.aspx" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Aadhaar No 🔗 Mobile No</li>
+        <li>Khatauni</li>
+    </ul>
+
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">6. Update Missing Info. SNY</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://pmkisan.gov.in/SearchBeneficiaryInformationUpdate.aspx" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Aadhaar No 🔗 Mobile No</li>
+    </ul>
+
+</div>
+
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">7. Beneficiary List SNY</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://pmkisan.gov.in/Rpt_BeneficiaryStatus_pub.aspx" target="_blank">Click Here</a>
+    </div>
+
+    <!-- <ul>
+        <li>Aadhaar No 🔗 Mobile No</li>
+    </ul> -->
+
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">8. Check Enrollment Status AS</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://bhfr.agristack.gov.in/farmer-registry-bh/#/checkEnrolmentStatus" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Enrollment ID</li>
+        <li>Aadhaar No 🔗 Mobile No</li>
+    </ul>
+
+</div>
+
+<div class="service">
+
+    <div class="row">
+        <span class="title">9. View Farmer Details AS</span>
+        <span class="arrow">➜</span>
+        <a class="link" href="https://bhfr.agristack.gov.in/farmer-registry-bh/#/homePrintEnrollmentDetails" target="_blank">Click Here</a>
+    </div>
+
+    <ul>
+        <li>Aadhaar No 🔗 Mobile No</li>
+    </ul>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<script>
+
+function searchTitle(){
+
+    let input = document.getElementById("search").value.trim().toLowerCase();
+    let titles = document.querySelectorAll(".title");
+
+    // Remove old highlight
+    titles.forEach(function(title){
+        title.classList.remove("highlight");
+    });
+
+    if(input==="") return;
+
+    let found = false;
+
+    titles.forEach(function(title){
+
+        if(!found && title.innerText.toLowerCase().includes(input)){
+
+            title.classList.add("highlight");
+
+            title.scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
+
+            found = true;
+        }
+
+    });
+
+}
+
+// Search button + Enter key
+document.getElementById("search").addEventListener("keydown", function(e){
+
+    if(e.key==="Enter"){
+        e.preventDefault();
+        searchTitle();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
